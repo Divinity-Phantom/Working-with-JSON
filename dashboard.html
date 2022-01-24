@@ -1,0 +1,35 @@
+<html>,
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Revenue for November 2019'],
+          ['Everett', 85000],
+          ['Seattle', 81000],
+          ['Lynnwood', 49000],
+          ['Bothell', 47000],
+		  ['Mukilteo', 46000],
+		  ['Edmonds', 34000]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Company Performance',
+          },
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+  <body>
+    <div id="barchart_material" style="width: 900px; height: 500px;text-align:left;"></div>
+  </body>
+</html>

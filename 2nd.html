@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:#F8F8F8">
+<h2>Import Products</h2>
+
+<table style="width:100%">
+  <tr>
+    <th style="border: 1px solid black;text-align:left;background-color:White"><h2 style="font-size:20px">Step 1: Select File</h2><br>
+	<form>
+    <center><input type="file" id="myFile" name="filename"accept=".csv,.json"></center><br>
+	<center><label>Supported File Type(s):.CSV,.JSON</label></center></form></th>
+	<th style="  border: 1px solid black;text-align:left;background-color:White"><h2 style="font-size:20px">Step 2: Specify Format</h2>
+	<table>
+	<tr>
+	<th>File Type</th>
+	<th><select>
+    <option value="csv">csv</option>
+    <option value="json">json</option>
+  </select></th>
+  </tr>
+  <tr>
+	<th>Character Encoding</th>
+	<th><select>
+    <option value="UTF-8">UTF-8</option>
+  </select></th>
+  </tr>
+  
+  <tr>
+	<th>Delimiter</th>
+	<th><select>
+    <option value="comma">comma</option>
+  </select></th>
+  </tr>
+  <tr>
+	<th>Has Header</th>
+	<th> 
+  <input type="checkbox"></th>
+  </tr>
+  </table>
+  </tr>
+</table>
+
+<table style="width:100%">
+  <tr>
+  <th style="border: 1px solid black;text-align:left;background-color:White">
+  <input type="checkbox">Step 3: Display Handling
+  <label>Select the fields to displayed</label>
+  <table>
+  <tr>
+  <th>Available Fields</th>
+   <th></th>
+    <th></th>
+	 <th></th>
+	  <th></th>
+  <th>Fields to be Displayed</th>
+
+  </tr>
+  <tr>
+  <form method="get">
+  <th style="border: 1px solid black;"> <input type="button" style="border: 0px solid black;text-align:left;background-color:White" id="Product ID"value="Product ID" onClick="pr()"></th>
+   <th></th> <th></th> <th></th> <th></th>
+  <th><span id="result"></span><br>
+  </th>
+  </form>
+  <script>document.value(document.getElementById('Product ID').value);</script>
+  <script>
+          function pr() {
+            document.getElementById("result").innerHTML = document.getElementById('Product ID').value;
+          }
+        </script>
+     </tr>
+  
+  <tr>
+  <form method="get">
+  <th style="border: 1px solid black;"> <input type="button" style="border: 0px solid black;text-align:left;background-color:White" id="Subcategory"value="Subcategory" onClick="a()"></th>
+ <th></th> <th></th> <th></th> <th></th>
+  <th><span id="b"></span><br>
+  </th>
+  </form>
+  <script>document.value(document.getElementById('Subcategory').value);</script>
+  <script>
+          function a() {
+            document.getElementById("b").innerHTML = document.getElementById('Subcategory').value;
+          }
+        </script>
+     </tr>
+  
+  <tr>
+  <form method="get">
+  <th style="border: 1px solid black;"> <input type="button" style="border: 0px solid black;text-align:left;background-color:White" id="Title"value="Title" onClick="c()"></th>
+   <th></th> <th></th> <th></th> <th></th>
+   <th><span id="d"></span><br>
+  </th>
+  </form>
+  <script>document.value(document.getElementById('Title').value);</script>
+  <script>
+          function c() {
+            document.getElementById("d").innerHTML = document.getElementById('Title').value;
+          }
+        </script>
+     </tr> 
+
+	 <tr>
+  <form method="get">
+  <th style="border: 1px solid black;"> <input type="button" style="border: 0px solid black;text-align:left;background-color:White" id="Price"value="Price" onClick="f()"></th>
+   <th></th> <th></th> <th></th> <th></th>
+   <th><span id="g"></span><br>
+  </th>
+  </form>
+  <script>document.value(document.getElementById('Price').value);</script>
+  <script>
+          function f() {
+            document.getElementById("g").innerHTML = document.getElementById('Price').value;
+          }
+        </script>
+     </tr>  <tr>
+  <form method="get">
+  <th style="border: 1px solid black;"> <input type="button" style="border: 0px solid black;text-align:left;background-color:White" id="Popularity"value="Popularity" onClick="h()"></th>
+   <th></th> <th></th> <th></th> <th></th>
+   <th><span id="i"></span><br>
+  </th>
+  </form>
+  <script>document.value(document.getElementById('Popularity').value);</script>
+  <script>
+          function h() {
+            document.getElementById("i").innerHTML = document.getElementById('Popularity').value;
+          }
+        </script>
+     </tr>  <tr>
+  <form action="PayslipServlet" method="get">
+  <th style="border: 1px solid black;"> <input type="button" style="border: 0px solid black;text-align:left;background-color:White" id="Description"value="Description" onClick="j()"></th>
+   <th></th> <th></th> <th></th> <th></th>
+   <th><span id="k"></span><br>
+  </th>
+  </form>
+  <script>document.value(document.getElementById('Description').value);</script>
+  <script>
+          function j() {
+            document.getElementById("k").innerHTML = document.getElementById('Description').value;
+          }
+        </script>
+     </tr>  <tr>
+  <form method="get">
+  <th style="border: 1px solid black;"> <input type="button" style="border: 0px solid black;text-align:left;background-color:White" id="Rating"value="Rating" onClick="l()"></th>
+   <th></th> <th></th> <th></th> <th></th>
+   <th><span id="m"></span><br>
+  </th>
+  </form>
+  <script>document.value(document.getElementById('Rating').value);</script>
+  <script>
+          function l() {
+            document.getElementById("m").innerHTML = document.getElementById('Rating').value;
+          }
+        </script>
+     </tr>  <tr>
+  <form method="get">
+  <th style="border: 1px solid black;"> <input type="button" style="border: 0px solid black;text-align:left;background-color:White" id="UTM Source"value="UTM Source" onClick="n()"></th>
+   <th></th> <th></th> <th></th> <th></th>
+   <th><span id="o"></span><br>
+  </th>
+  </form>
+  <script>document.value(document.getElementById('UTM Source').value);</script>
+  <script>
+          function n() {
+            document.getElementById("o").innerHTML = document.getElementById('UTM Source').value;
+          }
+        </script>
+     </tr>  <tr>
+  <form method="get">
+  <th style="border: 1px solid black;"> <input type="button" style="border: 0px solid black;text-align:left;background-color:White" id="UTM Medium"value="UTM Medium" onClick="y()"></th>
+   <th></th> <th></th> <th></th> <th></th>
+   <th><span id="z"></span><br>
+  </th>
+  </form>
+  <script>document.value(document.getElementById('UTM Medium').value);</script>
+  <script>
+          function y() {
+            document.getElementById("z").innerHTML = document.getElementById('UTM Medium').value;
+          }
+        </script>
+     </tr>  
+  
+</table>  
+  </th>
+  </tr>
+</table>
+<p  style="text-align:left"><button>NEXT</button><a href=" ">Cancel</a></p>
+</body>
+</html>
